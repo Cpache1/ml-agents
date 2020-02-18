@@ -103,3 +103,10 @@ venv/
 .coverage
 coverage.xml
 /htmlcov/
+
+#another that came from vs code
+UnitySDK/csharp_timers.json
+
+#vs code project generated files
+ml-agents/.vs/
+ml-agents-envs/.vs/
