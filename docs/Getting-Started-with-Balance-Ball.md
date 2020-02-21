@@ -48,21 +48,6 @@ it contains not one, but several agent cubes.  Each agent cube in the scene is a
 independent agent, but they all share the same Behavior. 3D Balance Ball does this
 to speed up training since all twelve agents contribute to training in parallel.
 
-### Academy
-
-The Academy object for the scene is placed on the Ball3DAcademy GameObject. Since
-the base Academy class is abstract, you must always define a subclass. There are
-three functions you can implement, though they are all optional:
-
-* Academy.InitializeAcademy() — Called once when the environment is launched.
-* Academy.AcademyStep() — Called at every simulation step before
-  agent.AgentAction() (and after the Agents collect their observations).
-* Academy.AcademyReset() — Called when the Academy starts or restarts the
-  simulation (including the first time).
-
-The 3D Balance Ball environment does not use these functions — each Agent resets
-itself when needed — but many environments do use these functions to control the
-environment around the Agents.
 
 ### Agent
 
@@ -76,9 +61,6 @@ behavior:
   the next section.
 * **Max Step** — Defines how many simulation steps can occur before the Agent
   decides it is done. In 3D Balance Ball, an Agent restarts after 5000 steps.
-* **Reset On Done** — Defines whether an Agent starts over when it is finished.
-  3D Balance Ball sets this true so that the Agent restarts after reaching the
-  **Max Step** count or after dropping the ball.
 
 Perhaps the more interesting aspect of an agents is the Agent subclass
 implementation. When you create an Agent, you must extend the base Agent class.
