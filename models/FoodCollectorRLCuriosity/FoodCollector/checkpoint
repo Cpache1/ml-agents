@@ -1,0 +1,4 @@
+model_checkpoint_path: "model-2000400.cptk"
+all_model_checkpoint_paths: "model-998120.cptk"
+all_model_checkpoint_paths: "model-1998320.cptk"
+all_model_checkpoint_paths: "model-2000400.cptk"
