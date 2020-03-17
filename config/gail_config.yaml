@@ -64,8 +64,16 @@ CrawlerStatic:
         strength: 0.5
         steps: 50000
     reward_signals:
-        gail:
+        extrinsic: #neither was this?
             strength: 1.0
+            gamma: 0.99
+        curiosity: #wasn't here before
+            strength: 0.02
+            gamma: 0.99
+            encoding_size: 256
+        gail:
+            #strength: 1.0
+            strength: 0.01
             gamma: 0.99
             encoding_size: 128
             demo_path: Project/Assets/ML-Agents/Examples/Crawler/Demos/ExpertCrawlerSta.demo
@@ -79,9 +87,22 @@ PushBlock:
     summary_freq: 60000
     time_horizon: 64
     num_layers: 2
+    behavioral_cloning: #not here
+        demo_path: Project/Assets/ML-Agents/Examples/PushBlock/Demos/ExpertPush.demo
+        #strength: 1.0
+        #steps: 0
+        strength: 0.5
+        steps: 6000
     reward_signals:
-        gail:
+        extrinsic: #not here
             strength: 1.0
+            gamma: 0.99
+        curiosity: #not here
+            strength: 0.02
+            gamma: 0.99
+            encoding_size: 256
+        gail:
+            strength: 0.01 #1.0
             gamma: 0.99
             encoding_size: 128
             demo_path: Project/Assets/ML-Agents/Examples/PushBlock/Demos/ExpertPush.demo
@@ -99,10 +120,18 @@ Hallway:
     max_steps: 1.0e7
     summary_freq: 10000
     time_horizon: 64
+    behavioral_cloning:
+        demo_path: Project/Assets/ML-Agents/Examples/Hallway/Demos/ExpertHallway.demo
+        strength: 0.5
+        steps: 7000
     reward_signals:
         extrinsic:
             strength: 1.0
             gamma: 0.99
+        curiosity: #not here
+            strength: 0.02
+            gamma: 0.99
+            encoding_size: 256
         gail:
             strength: 0.1
             gamma: 0.99
@@ -117,13 +146,23 @@ FoodCollector:
     learning_rate: 3.0e-4
     num_layers: 2
     sequence_length: 32
+    behavioral_cloning:
+        demo_path: Project/Assets/ML-Agents/Examples/FoodCollector/Demos/ExpertFood.demo
+        #strength: 1.0
+        #steps: 0
+        strength: 0.5
+        steps: 5000
     reward_signals:
+        extrinsic: #wasn't here before!
+            strength: 1.0
+            gamma: 0.99
+        curiosity: #wasn't here before
+            strength: 0.02
+            gamma: 0.99
+            encoding_size: 256
         gail:
             strength: 0.1
             gamma: 0.99
             encoding_size: 128
             demo_path: Project/Assets/ML-Agents/Examples/FoodCollector/Demos/ExpertFood.demo
-    behavioral_cloning:
-        demo_path: Project/Assets/ML-Agents/Examples/FoodCollector/Demos/ExpertFood.demo
-        strength: 1.0
-        steps: 0
+    
