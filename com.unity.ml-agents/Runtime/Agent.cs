@@ -201,6 +201,12 @@ namespace MLAgents
             LazyInitialize();
         }
 
+        //Added this here for my code purposes only (Obstacle Tower)
+        public bool GetIsDone()
+        {
+            return m_Info.done;
+        }
+
 
         public void OnBeforeSerialize()
         {
@@ -381,20 +387,6 @@ namespace MLAgents
         {
             NotifyAgentDone();
             _AgentReset();
-        }
-
-        /// <summary>
-        /// WARNING:
-        /// This was removed from previous versions...I am putting it back again!
-        /// Also changed the original name to not create confusion.
-        /// Indicates if the agent is done
-        /// </summary>
-        /// <returns>
-        /// <c>true</c>, if the agent is done, <c>false</c> otherwise.
-        /// </returns>
-        public bool GetIsDone()
-        {
-            return m_Info.done;
         }
 
         /// <summary>
