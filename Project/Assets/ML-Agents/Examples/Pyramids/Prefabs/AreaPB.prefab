@@ -619,12 +619,12 @@ MonoBehaviour:
     vectorActionSize: 05000000
     vectorActionDescriptions: []
     vectorActionSpaceType: 0
-  m_Model: {fileID: 0}
+  m_Model: {fileID: 11400000, guid: aa3fa19a09ec44a41be3da037783ad41, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: Pyramids
   m_TeamID: 0
-  m_UseChildSensors: 1
+  m_useChildSensors: 1
 --- !u!114 &114937736047215868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -637,9 +637,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8db44472779248d3be46895c4d562d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agentParameters:
-    maxStep: 0
-  hasUpgradedFromAgentParameters: 1
   maxStep: 5000
   area: {fileID: 1464170487903594}
   areaSwitch: {fileID: 1432086782037750}

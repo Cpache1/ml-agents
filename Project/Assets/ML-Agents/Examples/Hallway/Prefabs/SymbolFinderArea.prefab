@@ -1157,12 +1157,12 @@ MonoBehaviour:
     vectorActionSize: 05000000
     vectorActionDescriptions: []
     vectorActionSpaceType: 0
-  m_Model: {fileID: 11400000, guid: 317f4f8da7e4846b3aae0969781824a2, type: 3}
+  m_Model: {fileID: 0}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: Hallway
   m_TeamID: 0
-  m_useChildSensors: 1
+  m_UseChildSensors: 1
 --- !u!114 &114286701363010626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1175,6 +1175,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b446afae240924105b36d07e8d17a608, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  agentParameters:
+    maxStep: 0
+  hasUpgradedFromAgentParameters: 1
   maxStep: 3000
   ground: {fileID: 1510027348950282}
   area: {fileID: 1745841960385024}

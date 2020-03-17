@@ -1686,12 +1686,12 @@ MonoBehaviour:
     vectorActionSize: 14000000
     vectorActionDescriptions: []
     vectorActionSpaceType: 1
-  m_Model: {fileID: 11400000, guid: ac4a23ff4713140198629ae0844926ee, type: 3}
+  m_Model: {fileID: 0}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: CrawlerStatic
   m_TeamID: 0
-  m_useChildSensors: 1
+  m_UseChildSensors: 1
 --- !u!114 &114230237520033992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1704,6 +1704,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f37c30a5e8d04117947188818902ef3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  agentParameters:
+    maxStep: 0
+  hasUpgradedFromAgentParameters: 1
   maxStep: 5000
   target: {fileID: 4749909135913778}
   ground: {fileID: 4856650706546504}
